@@ -39,6 +39,10 @@ async def predict(
     }
 
 
+@app.get("/")
+async def qalaysiz():
+    return{"message": "Please upload your image on '/predict' via POST request to obtain results"}
+
 if __name__ == "__main__":
     uvicorn.run(app, host='localhost', port=8000)
 
